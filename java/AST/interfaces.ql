@@ -1,11 +1,11 @@
 /**
  * @name Print AST interfaces
  * @description Interface
- * @id isa-lab/detectors/csharp/ast/interfaces
+ * @id isa-lab/detectors/java/ast/interfaces
  * @kind problem
  */
 
-import csharp
+import java
 
 from Interface interface
 select interface, interface.getQualifiedName()
