@@ -8,5 +8,5 @@
 import java
 
 from MethodAccess methodAccess
-where /*not methodAccess.isOwnMethodAccess() and*/ methodAccess.getReceiverType().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where /*not methodAccess.isOwnMethodAccess() and*/ methodAccess.getReceiverType().getQualifiedName() = "$CLASS"
 select methodAccess, "Method access of class $CLASS: " + methodAccess.printAccess()

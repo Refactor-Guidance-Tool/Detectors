@@ -8,5 +8,5 @@
 import java
 
 from LocalVariableDecl localVariableDecl
-where localVariableDecl.getType().(RefType).hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where localVariableDecl.getType().(RefType).getQualifiedName() = "$CLASS"
 select localVariableDecl, "Variable is of type $CLASS: " + localVariableDecl.pp()

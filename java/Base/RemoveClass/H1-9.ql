@@ -8,5 +8,5 @@
 import java
 
 from TypeAccess typeAccess
-where typeAccess.getType().(RefType).getEnclosingType().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where typeAccess.getType().(RefType).getEnclosingType().getQualifiedName() = "$CLASS"
 select typeAccess, "$CLASS used to get access to inner type: " + typeAccess.toString()

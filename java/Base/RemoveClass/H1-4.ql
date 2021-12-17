@@ -8,5 +8,5 @@
 import java
 
 from InstanceOfExpr instanceOfExpr
-where instanceOfExpr.getCheckedType().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where instanceOfExpr.getCheckedType().getQualifiedName() = "$CLASS"
 select instanceOfExpr, "Instanceof expression using the $CLASS class."

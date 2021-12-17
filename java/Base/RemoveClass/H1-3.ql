@@ -8,5 +8,5 @@
 import java
 
 from FieldAccess fieldAccess
-where /*not fieldAccess.isOwnFieldAccess() and*/ fieldAccess.getField().getDeclaringType().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where /*not fieldAccess.isOwnFieldAccess() and*/ fieldAccess.getField().getDeclaringType().getQualifiedName() = "$CLASS"
 select fieldAccess, "Field access of class $CLASS: " + fieldAccess.toString()

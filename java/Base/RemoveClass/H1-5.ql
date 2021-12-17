@@ -8,5 +8,5 @@
 import java
 
 from Callable callable
-where callable.getReturnType().(RefType).hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where callable.getReturnType().(RefType).getQualifiedName() = "$CLASS"
 select callable, "$CLASS is used as return type in method: " + callable.getStringSignature()

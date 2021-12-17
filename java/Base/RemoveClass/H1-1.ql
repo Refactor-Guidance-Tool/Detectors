@@ -8,5 +8,5 @@
 import java
 
 from ConstructorCall constructorCall
-where not constructorCall.callsSuper() and constructorCall.getConstructedType().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where not constructorCall.callsSuper() and constructorCall.getConstructedType().getQualifiedName() = "$CLASS"
 select constructorCall, "Creation of new instance of type $CLASS: " + constructorCall.toString()

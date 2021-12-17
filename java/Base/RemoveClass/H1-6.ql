@@ -8,5 +8,5 @@
 import java
 
 from Parameter parameter
-where parameter.getType().(RefType).hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where parameter.getType().(RefType).getQualifiedName() = "$CLASS"
 select parameter, "Parameter is of type $CLASS: " + parameter.pp()

@@ -8,5 +8,5 @@
 import java
 
 from Field field
-where field.getType().(RefType).hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where field.getType().(RefType).getQualifiedName() = "$CLASS"
 select field, "Field is of type $CLASS: " + field.pp()

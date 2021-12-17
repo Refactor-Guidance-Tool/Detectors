@@ -8,5 +8,5 @@
 import java
 
 from RefType refType
-where refType.getASupertype+().hasQualifiedName("$CLASS_PACKAGE", "$CLASS")
+where refType.getASupertype+().getQualifiedName() = "$CLASS"
 select refType, "$CLASS is used as superclass"
